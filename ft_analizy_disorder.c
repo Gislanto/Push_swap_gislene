@@ -15,10 +15,8 @@ float  ft_analizy_disorder(int *stack, int size)
         temp = stack[i];
         j = 0;
         while (j < size - i)
-        {
             if (temp > stack[i + j++])
                 erros++;
-        }
         i++;
     }
     disorder = size * (size - 1) / 2;
