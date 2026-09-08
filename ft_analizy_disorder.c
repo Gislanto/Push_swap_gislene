@@ -1,10 +1,24 @@
-float  ft_analizy_disorder(int *stack, int size)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_analizy_disorder.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/05 16:13:37 by codespace         #+#    #+#             */
+/*   Updated: 2026/09/08 12:02:13 by codespace        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+float ft_analizy_disorder(int *stack, int size)
 {
-    int      i;
-    int      j;
-    long     disorder;
-    long     erros;
-    int      temp;
+    int i;
+    int j;
+    long disorder;
+    long erros;
+    int temp;
 
     i = 0;
     temp = 0;
@@ -15,8 +29,10 @@ float  ft_analizy_disorder(int *stack, int size)
         temp = stack[i];
         j = 0;
         while (j < size - i)
+        {
             if (temp > stack[i + j++])
                 erros++;
+        }
         i++;
     }
     disorder = size * (size - 1) / 2;
